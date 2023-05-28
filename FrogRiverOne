@@ -1,0 +1,24 @@
+// you can also use imports, for example:
+import java.util.*;
+
+// you can write to stdout for debugging purposes, e.g.
+// System.out.println("this is a debug message");
+
+class Solution {
+    public int solution(int X, int[] A) {
+        // Implement your solution here
+        HashSet<Integer>h = new HashSet<>();
+        for(int i = 1;i<=X;i++)
+        {
+            h.add(i);
+        }
+        for(int i =0;i<A.length;i++)
+        {
+            if(h.contains(A[i]))
+                h.remove(A[i]);
+            if (h.size() == 0)
+                return i;
+        }
+        return -1;
+    }
+}
