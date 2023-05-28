@@ -1,0 +1,28 @@
+// import java.util.*;
+
+// you can write to stdout for debugging purposes, e.g.
+// System.out.println("this is a debug message");
+
+class Solution {
+    public int solution(int[] A) {
+        // Implement your solution here
+
+ 
+        int zero = 0;
+
+        int count = 0;
+
+        for(int x:A)
+        {
+            if(x==0)
+            zero+=1;
+            else
+            {
+                count+=zero;
+            
+            }
+        }
+        return count > 1_000_000_000 || count < 0? -1:count;
+     
+    }
+}
